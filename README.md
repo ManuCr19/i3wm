@@ -11,5 +11,5 @@ Configuración personalizada del gestor de ventanas i3
 | **rofi**             | Menu para lanzar las aplicaciones       |
 | **feh**              | Permite cambiar el fondo de pantalla    |
 | **numlockx**         | Activar el teclado numerico             |
-| **pauvcontrol**      | Controlador de audio para pulseaudio    |
+| **pavucontrol**      | Controlador de audio para pulseaudio    |
 | **blueberry**        | Controlador de bluetooth                |
