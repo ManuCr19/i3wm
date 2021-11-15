@@ -1,0 +1,70 @@
+# i3wm config file
+# Autor: https://github.com/ManuCr19
+
+# Establecer tecla Mod como Alt
+set $mod Mod1
+
+# Establecemos fuente del sistema
+# font pango:System San Francisco Display 10
+ 
+# Mod + clic derecho en el borde de una ventana permite redimensionar
+floating_modifier $mod
+
+# El atajo de teclado para abrir una terminal será Mod + Enter
+bindsym $mod+Return exec i3-sensible-terminal
+
+# La combinación de teclas para cerrar una ventana activa es Mod + shift + q
+bindsym $mod+Shift+q kill
+bindsym $mod+w kill # Cerrar ventanas estilo qtile
+
+# Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
+# set $rofi_theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+bindsym $mod+d exec rofi -show drun -config $rofi_theme
+bindsym $mod+s exec rofi -show ssh -config $rofi_theme
+bindsym $mod+Shift+d exec rofi -show window -config $rofi_theme
+
+# Combinación de teclas para movernos entre ventanas
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ntilde focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Combinación de teclas para mover las ventanas
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Atajo para definir donde se abrira la sigiente ventana (abajo o al lado de la actual)
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Cambiar la ventana a modo pantalla completa
+bindsym $mod+Shift+f fullscreen toggle
+
+# Cambiar foco de una ventana anclada a flotante y viceversa
+bindsym $mod+space focus mode_toggle
+
+# Transformar una ventana de anclada a flotante y viceversa
+bindsym $mod+Shift+space floating toggle
+
+# Dar un nombre a los distintos espacios de trabajo
+set $workspace1 "1: Navegación "
+set $workspace2 "2: Terminal "
+set $workspace3 "3: Edición "
+set $workspace4 "4: Folders "
+set $workspace5 "5: Music "
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8" 
+set $workspace9 "9"
+set $workspace10 "10"
+
