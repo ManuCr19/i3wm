@@ -171,7 +171,7 @@ for_window [class="^.*"] border pixel 5
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
 # Controles del Touchpad
-#bindsym XF86TouchpadToggle exec /local/path/toggletouchpad
+bindsym XF86TouchpadToggle exec ~/.config/i3/scripts/toggletouchpad
 
 # Teclas multimedia *****playerctl******
 #bindsym XF86AudioPlay exec playerctl play
