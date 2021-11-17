@@ -13,3 +13,4 @@ Configuración personalizada del gestor de ventanas i3
 | **numlockx**         | Activar el teclado numerico             |
 | **pavucontrol**      | Controlador de audio para pulseaudio    |
 | **blueberry**        | Controlador de bluetooth                |
+| **ttf-font-awesome** | Fuente para que funciones los iconos    |
