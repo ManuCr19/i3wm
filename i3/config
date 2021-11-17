@@ -6,7 +6,11 @@ set $mod Mod1
 
 # Establecemos fuente del sistema
 font pango:System San Francisco Display 10
- 
+
+# Añadir gaps
+gaps inner 15
+gaps outer 15
+
 # Mod + clic derecho en el borde de una ventana permite redimensionar
 floating_modifier $mod
 
