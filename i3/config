@@ -8,10 +8,13 @@ set $mod Mod1
 font pango:System San Francisco Display 10
 
 # Añadir gaps
-gaps inner 15
-gaps outer 15
+gaps inner 6
+gaps outer 6
+#smart_gaps on
+smart_borders on
 
-# Mod + clic derecho en el borde de una ventana permite redimensionar
+# Mod + clic izquierdo en una ventana flotante permite moverla
+# Mod + clic derecho en el borde de una ventana flotante permite redimensionar
 floating_modifier $mod
 
 # El atajo de teclado para abrir una terminal será Mod + Enter
