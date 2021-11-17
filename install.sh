@@ -7,6 +7,8 @@ sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx pavucontrol blueb
 ls $HOME/.config >/dev/null 2>/dev/null || mkdir $HOME/.config
 ls /etc/skel/.config >/dev/null 2>/dev/null || mkdir /etc/skel/.config
 
+# Añadimos permisos de ejecucion a los bloques
+chmod +x i3/blocks/*
 
 # Copiar la configuracion a la carpeta home del usuario
 cp -r i3 $HOME/.config
