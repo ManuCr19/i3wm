@@ -5,12 +5,12 @@
 set $mod Mod1
 
 # Establecemos fuente del sistema
-font pango:System San Francisco Display 10
+font pango:Noto Sans 12
 
 # Añadir gaps
 gaps inner 6
 gaps outer 6
-#smart_gaps on
+smart_gaps on
 smart_borders on
 
 # Mod + clic izquierdo en una ventana flotante permite moverla
@@ -67,7 +67,7 @@ bindsym $mod+Shift+space floating toggle
 # Dar un nombre a los distintos espacios de trabajo
 set $workspace1 "1: Browsers "
 set $workspace2 "2: Terminals "
-set $workspace3 "3: Text editors "
+set $workspace3 "3: Text editors "
 set $workspace4 "4: Folders "
 set $workspace5 "5"
 set $workspace6 "6"
@@ -120,6 +120,7 @@ mode "resize" {
         # Salir del modo resize
         bindsym Return mode "default"
         bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 # Activar el modo redimensionar ventanas
@@ -159,7 +160,8 @@ bar {
 }
 
 # Quita la ventana de título y se define el grosor del borde que recubre las ventanas
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
+new_window pixel 3
 
 # Mutear, incrementar y bajar el volúmen con el teclado *****pactl*****
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -179,9 +181,12 @@ bindsym XF86TouchpadToggle exec ~/.config/i3/scripts/toggletouchpad
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
 
+# Capturas de pantalla ****gnome-screenshot****
+#bindsym Print exec gnome-screenshot
+
 # Activar bloq num al iniciar i3wm (need numlockx)
 exec_always --no-startup-id numlockx on
 
 # Establecer el fondo de escritorio al iniciar i3wm (need feh)
-# exec_always feh --bg-scale https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
 
