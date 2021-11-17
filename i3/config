@@ -25,7 +25,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+w kill # Cerrar ventanas estilo qtile
 
 # Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
-set $rofi_theme "~/.config/rofi/flat-blue.rasi"
+set $rofi_theme "~/.config/i3/rofi-themes/flat-blue.rasi"
 bindsym $mod+d exec rofi -show drun -config $rofi_theme
 bindsym $mod+s exec rofi -show ssh -config $rofi_theme
 bindsym $mod+Shift+d exec rofi -show window -config $rofi_theme
@@ -142,7 +142,7 @@ client.urgent           $blue-color    $blue-color   $text-color          #00ff0
 # Definir barra
 bar {
         # Programa de la barra
-        status_command i3blocks -c ~/.config/i3blocks/config
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
         
         # Posicion de la barra
         position top
