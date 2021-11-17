@@ -117,43 +117,37 @@ mode "resize" {
 # Activar el modo redimensionar ventanas
 bindsym $mod+r mode "resize"
 
-# Configuración de colores mostrados en pantalla
-set $bg-color	         #2f343f
-set $border-focus	 	 #8c8c8c
+# Color config
+set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 set $blue-color          #5DA8F4
 
-# Colores de las ventanas
-#                       Border              Background         text                 indicator
-client.focused          $border-focus       $border-focus      $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $blue-color         $blue-color
+# Window colors
+client.focused          $bg-color           $bg-color          $text-color          #00ff00
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           $blue-color    $blue-color   $text-color          #00ff00
 
 # Definir barra
 bar {
- 
-	# Programa que ejecuta la barra
-	status_command i3blocks -c ~/.config/i3blocks.conf
- 
-	# Establecer fuente de la barra
-	font xft: FontAwesome 9
- 
-	# Posición de la barra
-	position top
- 
-	# Colores de la barra
-	colors {
+        # Bar program
+        status_command i3blocks -c ~/.i3/i3blocks.conf
+        
+        # Position of the bar
+        position top
+        
+        # Bar colors
+        colors {
 		background $bg-color
-		separator #757575
+	    	separator #757575
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	 urgent_workspace   $blue-color        $blue-color        $text-color
- }
+	        urgent_workspace   $blue-color   $blue-color   $text-color
+        }
 }
 
 # Quita la ventana de título y se define el grosor del borde que recubre las ventanas
