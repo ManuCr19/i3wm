@@ -190,3 +190,23 @@ exec_always --no-startup-id numlockx on
 # Establecer el fondo de escritorio al iniciar i3wm (need feh)
 exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
 
+# Asignar aplicaciones a los espacios de trabajo
+# Browsers 
+assign [class="Firefox"] $workspace1
+assign [class="Google-chrome"] $workspace1
+assign [class="Brave"] $workspace1
+# Terminals 
+assign [class="Alacritty"] $workspace2
+# Text editors 
+assign [class="Atom"] $workspace3
+assign [class="Code"] $workspace3
+assign [class="Gedit"] $workspace3
+assign [class="LibreOffice"] $workspace3
+# Folders 
+assign [class="Nautilus"] $workspace4
+# Games  
+assign [class="Stadia"] $workspace5
+assign [class="Steam"] $workspace5
+# Music 
+assign [class="Spotify"] $workspace10
+#for_window [class="Spotify"] move to workspace $workspace10
