@@ -3,6 +3,9 @@
 # Instalar paquetes necesarios en Arch Linux
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx pavucontrol blueberry ttf-font-awesome
 
+# Instalar programas
+trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es steam alacritty gedit
+
 # Comprobar que existe la carpeta .config, si no existe la crea
 ls $HOME/.config >/dev/null 2>/dev/null || mkdir $HOME/.config
 ls /etc/skel/.config >/dev/null 2>/dev/null || mkdir /etc/skel/.config
