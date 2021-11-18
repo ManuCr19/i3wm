@@ -22,7 +22,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # La combinación de teclas para cerrar una ventana activa es Mod + shift + q
 bindsym $mod+Shift+q kill
-bindsym $mod+w kill # Cerrar ventanas estilo qtile
+bindsym $mod+w kill
 
 # Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
 set $rofi_theme "~/.config/i3/rofi-themes/flat-blue.rasi"
