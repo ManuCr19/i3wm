@@ -40,7 +40,7 @@ def create_argparse():
         action = 'store_const',
         const = True,
         default = _default('AUR', 'False', strbool),
-        help='Include AUR packages. Attn: Yaourt must be installed'
+        help='Include AUR packages. Attn: trizen must be installed'
     )
     parser.add_argument(
         '-q',
@@ -76,7 +76,7 @@ def get_updates():
 def get_aur_updates():
     output = ''
     try:
-        output = check_output(['yaourt', '-Qua']).decode('utf-8')
+        output = check_output(['trizen', '-Qua']).decode('utf-8')
     except subprocess.CalledProcessError as exc:
         # yaourt exits with 1 and no output if no updates are available.
         # we ignore this case and go on
