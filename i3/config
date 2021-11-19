@@ -161,10 +161,10 @@ bar {
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
 
-# Mutear, incrementar y bajar el volúmen con el teclado *****pactl*****
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+# Mutear, incrementar y bajar el volúmen con el teclado (need playerctl)
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Incrementar o disminuir el brillo del monitor *****xbacklight*****
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20
