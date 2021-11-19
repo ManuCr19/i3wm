@@ -14,3 +14,4 @@ Configuración personalizada del gestor de ventanas i3
 | **pavucontrol**      | Controlador de audio para pulseaudio    |
 | **blueberry**        | Controlador de bluetooth                |
 | **ttf-font-awesome** | Fuente para que funciones los iconos    |
+| **acpi**             | Necesario para el indicador de bateria  |
