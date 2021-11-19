@@ -8,13 +8,11 @@ set $mod Mod1
 font pango:Noto Sans 12
 
 # Añadir gaps
-gaps inner 6
-gaps outer 6
+gaps inner 7
 smart_gaps on
-smart_borders on
 
 # Mod + clic izquierdo en una ventana flotante permite moverla
-# Mod + clic derecho en el borde de una ventana flotante permite redimensionar
+# Mod + clic derecho en el borde de una ventana permite redimensionar
 floating_modifier $mod
 
 # El atajo de teclado para abrir una terminal será Mod + Enter
