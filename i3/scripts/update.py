@@ -120,11 +120,11 @@ if args.aur:
 update_count = len(updates)
 if update_count > 0:
     if update_count == 1:
-      info = str(update_count) + ' update available'
-      short_info = str(update_count) + ' update'
+      info = '  ' + str(update_count) + ' update'
+      short_info = '  ' + str(update_count)
     else:
-      info = str(update_count) + ' updates available'
-      short_info = str(update_count) + ' updates'
+      info = '  ' + str(update_count) + ' updates'
+      short_info = '  ' + str(update_count)
 
     matches = matching_updates(updates, args.watch)
     if matches:
@@ -133,4 +133,4 @@ if update_count > 0:
     print(message.format(label, args.updates_available_color, info))
     print(message.format(label, args.updates_available_color, short_info))
 elif not args.quiet:
-    print(message.format(label, args.base_color, 'Updated'))
+    print(message.format(label, args.base_color, '  Updated'))
