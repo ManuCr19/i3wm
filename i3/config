@@ -10,6 +10,7 @@ font pango:Noto Sans 12
 # Añadir gaps
 gaps inner 7
 smart_gaps on
+smart_borders on
 
 # Mod + clic izquierdo en una ventana flotante permite moverla
 # Mod + clic derecho en el borde de una ventana permite redimensionar
