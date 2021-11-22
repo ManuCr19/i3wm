@@ -149,12 +149,16 @@ bar {
         
         # Colores de la barra
         colors {
-		background $bg-color
-	    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-	        urgent_workspace   $blue-color   $blue-color   $text-color
+		background #000000
+		statusline #ffffff
+	   	separator  #666666
+
+		#color class       border    background    text
+		focused_workspace  #4c1899   #285577       #ffffff
+		active_workspace   #333333   #5f676a       #ffffff
+		inactive_workspace #333333   #222222       #888888
+	        urgent_workspace   #2f343a   #900000       #ffffff
+		binding_mode       #2f343a   #900000       #ffffff
         }
 }
 
