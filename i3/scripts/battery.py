@@ -66,7 +66,7 @@ else:
 
 
     if state == "Discharging":
-        fulltext = "" + FA_BATTERY + " "
+        fulltext = " " + FA_BATTERY + " "
     elif state == "Full":
         fulltext = FA_PLUG + " "
         timeleft = ""
