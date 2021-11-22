@@ -125,6 +125,12 @@ mode "resize" {
 # Activar el modo redimensionar ventanas
 bindsym $mod+r mode "resize"
 
+# Definir Colores
+set $color "#0273ff"
+set $bg-color "#222222"
+set $separator "#999999"
+set $urgent "#ff0000"
+
 # Colores de las ventanas
 # class                  border   backgr.  text     indicator  child_border
 client.focused           #4c7899  #285577  #ffffff  #2e9ef4    #285577
@@ -145,16 +151,14 @@ bar {
         
         # Colores de la barra
         colors {
-		background #000000
-		statusline #ffffff
-	 	separator  #666666
+		background $bg-color
+ 		separator  $separator
 
-		#color class        border   backgr.  text
-		focused_workspace   #4c1899  #285577  #ffffff
-		active_workspace    #333333  #5f676a  #ffffff
-		inactive_workspace  #333333  #222222  #888888
-	        urgent_workspace    #2f343a  #900000  #ffffff
-		binding_mode        #2f343a  #900000  #ffffff
+		#color class        border     backgr.    text
+		focused_workspace   $bg-color  $color     $bg-color
+		inactive_workspace  $bg-color  $bg-color  $color
+		urgent_workspace    $bg-color  $urgent    $bg-color
+		binding_mode        $bg-color  $urgent    $bg-color
         }
 }
 
