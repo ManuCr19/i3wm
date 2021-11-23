@@ -128,7 +128,6 @@ bindsym $mod+r mode "resize"
 # Definir Colores
 set $color "#0273ff"
 set $bg-color "#222222"
-set $separator "#999999"
 set $urgent "#ff0000"
 
 # Colores de las ventanas
@@ -152,7 +151,6 @@ bar {
         # Colores de la barra
         colors {
 		background $bg-color
- 		separator  $separator
 
 		#color class        border     backgr.    text
 		focused_workspace   $bg-color  $color     $bg-color
