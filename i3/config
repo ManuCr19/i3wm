@@ -203,8 +203,7 @@ assign [class="LibreOffice"] $workspace3
 # Folders 
 assign [class="Nautilus"] $workspace4
 # Games  
-assign [class="Stadia"] $workspace9
+for_window [class="Stadia"] move to workspace $workspace10
 assign [class="Steam"] $workspace9
 # Music 
-assign [class="Spotify"] $workspace10
-#for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Spotify"] move to workspace $workspace10
