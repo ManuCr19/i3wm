@@ -66,7 +66,7 @@ bindsym $mod+Shift+space floating toggle
 # Dar un nombre a los distintos espacios de trabajo
 set $workspace1 "1: Browsers "
 set $workspace2 "2: Terminals "
-set $workspace3 "3: Text editors "
+set $workspace3 "3: LibreOffice "
 set $workspace4 "4: Folders "
 set $workspace5 "5"
 set $workspace6 "6"
@@ -193,7 +193,7 @@ exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimal
 assign [class="Brave"] $workspace1
 # Terminals 
 assign [class="Alacritty"] $workspace2
-# Text editors 
+# LibreOffice 
 assign [title="LibreOffice"] $workspace3
 # Folders 
 assign [class="Nautilus"] $workspace4
