@@ -51,8 +51,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Atajo para definir donde se abrira la sigiente ventana (abajo o al lado de la actual)
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+h split v
+bindsym $mod+v split h
 
 # Cambiar la ventana a modo pantalla completa
 bindsym $mod+Shift+f fullscreen toggle
