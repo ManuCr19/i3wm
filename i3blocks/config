@@ -10,13 +10,13 @@ align=center
 
 # Reproductor multimedia
 [mediaplayer]
-command=perl ~/.config/i3/scripts/mediaplayer.pl 
+command=perl ~/.config/scripts/mediaplayer.pl 
 label= - 
 interval=5
 
 # Indicador de actualizaciones
 [update]
-command=python3 ~/.config/i3/scripts/update.py
+command=python3 ~/.config/scripts/update.py
 markup=pango
 interval= 3600
 QUIET=true
@@ -25,7 +25,7 @@ UPDATE_COLOR=#FFFF85
 AUR=true
 
 [nm-vpn]
-command=bash ~/.config/i3/scripts/nm-vpn.sh
+command=bash ~/.config/scripts/nm-vpn.sh
 #init_color=#FFFF00
 #on_color=#EEEEEE
 label=  
@@ -33,7 +33,7 @@ interval=5
 
 # Indicador de Bateria
 [battery]
-command=python3 ~/.config/i3/scripts/battery.py
+command=python3 ~/.config/scripts/battery.py
 markup=pango
 interval=10
 

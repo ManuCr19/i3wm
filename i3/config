@@ -24,7 +24,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+w kill
 
 # Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
-set $rofi_theme "~/.config/i3/rofi-themes/flat-blue.rasi"
+set $rofi_theme "~/.config/rofi/flat-blue.rasi"
 bindsym $mod+d exec rofi -show drun -config $rofi_theme
 bindsym $mod+s exec rofi -show ssh -config $rofi_theme
 bindsym $mod+Shift+d exec rofi -show window -config $rofi_theme
@@ -119,7 +119,7 @@ mode "resize" {
         # Salir del modo resize
         bindsym Return mode "default"
         bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
+		bindsym $mod+r mode "default"
 }
 
 # Activar el modo redimensionar ventanas
@@ -143,7 +143,7 @@ client.background       #ffffff
 # Definir barra
 bar {
 	# Programa de la barra
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        status_command i3blocks -c ~/.config/i3blocks/config
         
         # Posicion de la barra
         position top
