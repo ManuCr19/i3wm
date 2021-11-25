@@ -4,7 +4,7 @@
 sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter materia-gtk-theme
 sudo systemctl enable lightdm.service
 sudo mkdir /etc/lightdm/lightdm.conf.d
-sudo cp lightdm/19-i3wm-ManuCr19.conf /etc/lightdm/lightdm.conf.d
+sudo cp lightdm/i3wm.conf /etc/lightdm/lightdm.conf.d
 
 # Instalar paquetes necesarios en Arch Linux
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst
