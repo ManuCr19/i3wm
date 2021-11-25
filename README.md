@@ -1,5 +1,5 @@
 # i3wm
-Configuracion de i3wm + gaps + rofi + i3blocks + lightdm
+Configuracion de i3wm + gaps + rofi + i3blocks + lightdm + dunst
 
 | Paquete              | Descripcion                                |
 | -------------------- | -------------------------------------------|
@@ -13,6 +13,7 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm
 | **pavucontrol**      | Controlador de audio para pulseaudio       |
 | **ttf-font-awesome** | Fuente para que funciones los iconos       |
 | **acpi**             | Necesario para el indicador de bateria     |
+| **dunst**            | Para recivir las notificaciones            |
 
 # Lightdm
 Sera el gestor de inicio de sesion que usaremos por defecto.
