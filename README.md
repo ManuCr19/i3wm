@@ -18,10 +18,12 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm
 Sera el gestor de inicio de sesion que usaremos por defecto.
 
 ~~~
-sudo pacman -S lightdm slick-greeter
+sudo pacman -S lightdm slick-greeter materia-gtk-theme
+cp lightdm/19-i3wm-ManuCr19.conf /usr/share/lightdm/lightdm.conf.d
 ~~~
 
 | Paquete           | Descripcion                                 |
 |-------------------|---------------------------------------------|
 | **lightdm**       | Contiene el gestor de inicio de sesion      |
 | **slick-greeter** | Cambia la apariencia por defecto de lightdm |
+| **materia-gtk-theme** | Tema de gtk utilizado por slick-greeter |
