@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Instalar gestor de inicio de sesion
-sudo pacman --noconfirm -Sy lightdm slick-greeter materia-gtk-theme
+sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter materia-gtk-theme
 sudo systemctl enable lightdm.service
-sudo cp lightdm/19-i3wm-ManuCr19.conf /usr/share/lightdm/lightdm.conf.d
+sudo mkdir /etc/lightdm/lightdm.conf.d
+sudo cp lightdm/19-i3wm-ManuCr19.conf /etc/lightdm/lightdm.conf.d
 
 # Instalar paquetes necesarios en Arch Linux
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst
