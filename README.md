@@ -1,8 +1,6 @@
 # i3wm
 Configuracion de i3wm + gaps + rofi + i3blocks + lightdm
 
-# Paquetes utilizados
-
 | Paquete              | Descripcion                                |
 | -------------------- | -------------------------------------------|
 | **i3-wm**            | Contiene el gestor de ventanas i3          |
@@ -17,7 +15,7 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm
 | **acpi**             | Necesario para el indicador de bateria     |
 
 # Lightdm
-Sera el gestor de inicio de sesion que usaremos por defecto. Para su funcionamiento necesitaremos:
+Sera el gestor de inicio de sesion que usaremos por defecto.
 
 | Paquete           | Descripcion                                 |
 |-------------------|---------------------------------------------|
