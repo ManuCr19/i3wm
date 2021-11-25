@@ -4,8 +4,11 @@
 sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
 sudo cp lightdm/slick-greeter.conf /etc/lightdm
-sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
-sed -i '/greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
+sudo sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
+sudo sed -i '/greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
+
+# Instalar tema de gtk Adwaita
+sudo pacman --noconfirm -Sy gnome-themes-extra
 
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst
