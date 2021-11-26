@@ -5,7 +5,7 @@ sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
 sudo cp lightdm/slick-greeter.conf /etc/lightdm
 sudo sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
-sudo sed -i '/greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
+sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo mkdir /usr/share/backgrounds
 sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 
