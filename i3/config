@@ -17,7 +17,7 @@ smart_borders on
 floating_modifier $mod
 
 # El atajo de teclado para abrir una terminal será Mod + Enter
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
 
 # La combinación de teclas para cerrar una ventana activa es Mod + shift + q
 bindsym $mod+Shift+q kill
@@ -190,6 +190,11 @@ exec nm-applet
 
 # Establecer el fondo de escritorio al iniciar i3wm (need feh)
 exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
+
+# Atajos para aplicaciones
+bindsym $mod+Return exec alacritty
+bindsym $mod+b exec brave
+bindsym $mod+f exec nautilus
 
 # Asignar aplicaciones a los espacios de trabajo
 # Browsers 
