@@ -206,7 +206,7 @@ assign [title="LibreOffice"] $workspace3
 # Folders 
 assign [class="Nautilus"] $workspace4
 # Games  
-for_window [title="Stadia"] move to workspace $workspace10
+for_window [title="Stadia"] move to workspace $workspace9
 assign [class="Steam"] $workspace9
 # Music 
 for_window [title="Spotify"] move to workspace $workspace10
