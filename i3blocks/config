@@ -25,15 +25,8 @@ UPDATE_COLOR=#FFFF85
 AUR=true
 
 [bluetooth]
-command=bash ~/config/scripts/i3b-gate 30
+command=bash ~/.config/scripts/i3b-gate 30
 interval=1
-
-#[nm-vpn]
-#command=bash ~/.config/scripts/nm-vpn.sh
-#init_color=#FFFF00
-#on_color=#EEEEEE
-#label=  
-#interval=5
 
 # Indicador de volumen
 [volume-pulseaudio]
@@ -42,10 +35,10 @@ interval=1
 
 # Indicador de Bateria
 [battery]
-command=bash ~/config/scripts/i3b-gate 6
+command=bash ~/.config/scripts/i3b-gate 6
 interval=10
 
 #Mostrar hora
 [hora]
-command=bash ~/config/scripts/i3b-gate 5
+command=bash ~/.config/scripts/i3b-gate 5
 interval=1
