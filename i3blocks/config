@@ -38,9 +38,7 @@ interval=1
 # Indicador de volumen
 [volume-pulseaudio]
 command=bash ~/.config/scripts/volume
-interval=persist
-SUBSCRIBE=1
-USE_ALSA_NAME=1
+interval=1
 
 # Indicador de Bateria
 [battery]
