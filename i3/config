@@ -186,7 +186,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always --no-startup-id numlockx on
 
 # Applets
-exec nm-applet
+exec_always nm-applet
 
 # Establecer el fondo de escritorio al iniciar i3wm (need feh)
 exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
