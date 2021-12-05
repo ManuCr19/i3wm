@@ -35,6 +35,13 @@ interval=1
 #label=  
 #interval=5
 
+# Indicador de volumen
+[volume-pulseaudio]
+command=bash ~/.config/scripts/volume
+interval=persist
+SUBSCRIBE=1
+USE_ALSA_NAME=1
+
 # Indicador de Bateria
 [battery]
 command=bash ~/config/scripts/i3b-gate 6
