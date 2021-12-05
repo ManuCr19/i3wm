@@ -13,7 +13,7 @@ sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 sudo pacman --noconfirm -Sy gnome-themes-extra
 
 # Instalar paquetes necesarios
-sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst
+sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
 
 # Instalar programas
 trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es steam alacritty
