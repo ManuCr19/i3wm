@@ -24,10 +24,6 @@ WATCH=^linux.*
 UPDATE_COLOR=#FFFF85
 AUR=true
 
-[bluetooth]
-command=bash ~/.config/scripts/i3b-gate 30
-interval=1
-
 # Indicador de volumen
 [volume-pulseaudio]
 command=bash ~/.config/scripts/volume
