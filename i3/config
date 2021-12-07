@@ -24,11 +24,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+w kill
 
 # Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
-set $rofi_theme "~/.config/rofi/flat-blue.rasi"
-bindsym $mod+d exec rofi -show drun -config $rofi_theme
-bindsym $mod+s exec rofi -show ssh -config $rofi_theme
-bindsym $mod+Shift+d exec rofi -show window -config $rofi_theme
-bindsym $mod+m exec rofi -show run -config $rofi_theme
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+s exec rofi -show ssh
+bindsym $mod+Shift+d exec rofi -show window
+bindsym $mod+m exec rofi -show run
 
 # Combinación de teclas para movernos entre ventanas
 bindsym $mod+j focus left
