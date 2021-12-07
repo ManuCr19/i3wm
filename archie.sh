@@ -12,6 +12,7 @@ sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 # Instalar tema de rofi
 git clone https://github.com/davatorium/rofi-themes
 sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
+sudo rm -r rofi-themes
 
 # Instalar tema de gtk Adwaita
 sudo pacman --noconfirm -Sy gnome-themes-extra
@@ -28,3 +29,5 @@ sudo cp -r i3 /etc/skel/.config
 sudo cp -r rofi /etc/skel/.config
 sudo cp -r i3blocks /etc/skel/.config
 sudo cp -r scripts /etc/skel/.config
+sudo cp -r gtk-3.0 /etc/skel/.config
+sudo cp .gtkrc-2.0 /etc/skel
