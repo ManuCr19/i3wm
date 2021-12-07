@@ -14,6 +14,7 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm + dunst
 | **ttf-font-awesome** | Fuente para que funciones los iconos       |
 | **acpi**             | Necesario para el indicador de bateria     |
 | **dunst**            | Para recivir las notificaciones            |
+| **gnome-themes-extra** | Contiene el tema adwaita-dark            |
 
 # Lightdm
 Sera el gestor de inicio de sesion que usaremos por defecto.
@@ -22,4 +23,3 @@ Sera el gestor de inicio de sesion que usaremos por defecto.
 |-------------------|---------------------------------------------|
 | **lightdm**       | Contiene el gestor de inicio de sesion      |
 | **slick-greeter** | Cambia la apariencia por defecto de lightdm |
-| **materia-gtk-theme** | Tema de gtk utilizado por slick-greeter |
