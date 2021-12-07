@@ -9,6 +9,10 @@ sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lig
 sudo mkdir /usr/share/backgrounds
 sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 
+# Instalar tema de rofi
+git clone https://github.com/davatorium/rofi-themes
+sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
+
 # Instalar tema de gtk Adwaita
 sudo pacman --noconfirm -Sy gnome-themes-extra
 
@@ -16,7 +20,7 @@ sudo pacman --noconfirm -Sy gnome-themes-extra
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
 
 # Instalar programas
-trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es steam alacritty
+trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty lutris
 
 # Copiar la configuracion al skel
 sudo mkdir /etc/skel/.config
