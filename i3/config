@@ -5,7 +5,7 @@
 set $mod Mod1
 
 # Establecemos fuente del sistema
-font pango:Noto Sans 12
+font pango:Cantarell 11
 
 # Añadir gaps
 gaps inner 7
