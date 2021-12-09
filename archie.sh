@@ -20,6 +20,10 @@ sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet blueman
 
+# Instalar y activar bluetooh
+sudo pacman --noconfirm -Sy bluez blueman
+sudo systemctl enable bluetooh.service
+
 # Instalar programas
 trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty lutris
 
