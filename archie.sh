@@ -14,8 +14,8 @@ git clone https://github.com/davatorium/rofi-themes
 sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
 sudo rm -r rofi-themes
 
-# Instalar tema de gtk Adwaita
-sudo pacman --noconfirm -Sy gnome-themes-extra
+# Instalar Adwaita-Dark y Papirus
+sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme
 
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet blueman
