@@ -14,14 +14,14 @@ git clone https://github.com/davatorium/rofi-themes
 sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
 sudo rm -r rofi-themes
 
-# Instalar Adwaita-Dark y Papirus
-sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme
+# Instalar tema gtk, paquete de iconos y fuente
+sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-awesome
 
 # Instalar paquetes necesarios
-sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx ttf-font-awesome acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet blueman
+sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
 
 # Instalar y activar bluetooh
-sudo pacman --noconfirm -Sy bluez blueman
+sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooh
 sudo systemctl enable bluetooh.service
 
 # Instalar programas
