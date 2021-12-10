@@ -21,7 +21,7 @@ sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-aweso
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
 
 # Instalar y activar bluetooh
-sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooh
+sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooh.service
 
 # Instalar programas
