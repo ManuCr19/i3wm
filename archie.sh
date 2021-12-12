@@ -20,9 +20,9 @@ sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-aweso
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
 
-# Instalar y activar bluetooh
+# Instalar y activar bluetooth
 sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooth
-sudo systemctl enable bluetooh.service
+sudo systemctl enable bluetooth.service
 
 # Instalar programas
 trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty lutris
