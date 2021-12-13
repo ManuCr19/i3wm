@@ -9,26 +9,30 @@ sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lig
 sudo mkdir /usr/share/backgrounds
 sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 
-# Instalar tema de rofi
-git clone https://github.com/davatorium/rofi-themes
-sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
-sudo rm -r rofi-themes
+# Instalar paquetes necesarios
+sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot
 
 # Instalar tema gtk, paquete de iconos y fuente
 sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-awesome
 
-# Instalar paquetes necesarios
-sudo pacman --noconfirm -Sy i3-gaps i3blocks rofi feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet
+# Instalar rofi y sus temas
+sudo pacman --noconfirm -Sy rofi
+git clone https://github.com/davatorium/rofi-themes
+sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
+sudo rm -r rofi-themes
 
 # Instalar y activar bluetooth
 sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooth.service
 
 # Instalar programas
-trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty lutris
+trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty
+
+# Instalar game app
+trizen --noconfirm -Sy wine lutris mango-hud steam
 
 # Copiar la configuracion al skel
-sudo mkdir /etc/skel/.config
+sudo mkdir -p /etc/skel/.config
 sudo cp -r i3 /etc/skel/.config
 sudo cp -r rofi /etc/skel/.config
 sudo cp -r i3blocks /etc/skel/.config
