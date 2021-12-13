@@ -173,21 +173,21 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
+
 # Teclas multimedia (need playerctl)
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Capturas de pantalla (need gnome-screenshot)
-bindsym Print exec gnome-screenshot
+# Capturas de pantalla ****gnome-screenshot****
+#bindsym Print exec gnome-screenshot
 
 # Activar bloq num al iniciar i3wm (need numlockx)
 exec_always --no-startup-id numlockx on
 
-# Applets (need network-manager-applet and blueman)
+# Applets
 exec_always nm-applet
-exec_always blueman-applet
 
 # Establecer el fondo de escritorio al iniciar i3wm (need feh)
 exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
@@ -196,7 +196,6 @@ exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimal
 bindsym $mod+Return exec alacritty
 bindsym $mod+b exec brave
 bindsym $mod+f exec nautilus
-bindsym $mod+g exec lutris
 
 # Asignar aplicaciones a los espacios de trabajo
 # Browsers 
@@ -209,7 +208,6 @@ assign [title="LibreOffice"] $workspace3
 assign [class="Nautilus"] $workspace4
 # Games  
 for_window [title="Stadia"] move to workspace $workspace9
-for_window [title="Lutris"] move to workspace $workspace9
 assign [class="Steam"] $workspace9
 # Music 
 for_window [title="Spotify"] move to workspace $workspace10
