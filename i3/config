@@ -21,9 +21,8 @@ floating_modifier $mod
 
 # La combinación de teclas para cerrar una ventana activa es Mod + shift + q
 bindsym $mod+Shift+q kill
-bindsym $mod+w kill
 
-# Definimos el tema y los atajos de teclado para el funcionamiento de Rofi
+# Definimos los atajos de teclado de Rofi
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+s exec rofi -show ssh
 bindsym $mod+Shift+d exec rofi -show window
@@ -53,7 +52,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split v
 bindsym $mod+v split h
 
-# Cambiar la ventana a modo pantalla completa
+# Cambiar la ventana a modo pantalla completa y viceversa
 bindsym $mod+Shift+f fullscreen toggle
 
 # Cambiar foco de una ventana anclada a flotante y viceversa
@@ -118,7 +117,7 @@ mode "resize" {
         # Salir del modo resize
         bindsym Return mode "default"
         bindsym Escape mode "default"
-		bindsym $mod+r mode "default"
+	bindsym $mod+r mode "default"
 }
 
 # Activar el modo redimensionar ventanas
