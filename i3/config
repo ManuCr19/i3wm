@@ -210,6 +210,6 @@ assign [class="Nautilus"] $workspace4
 # Games  
 for_window [title="Stadia"] move to workspace $workspace9
 for_window [title="Lutris"] move to workspace $workspace9
-assign [class="Steam"] $workspace9
+for_window [title="Steam"] move to workspace $workspace9
 # Music 
 for_window [title="Spotify"] move to workspace $workspace10
