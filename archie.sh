@@ -29,7 +29,7 @@ sudo systemctl enable bluetooth.service
 trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty
 
 # Instalar game app
-trizen --noconfirm -Sy wine lutris mango-hud steam
+trizen --noconfirm -Sy wine lutris mangohud steam
 
 # Copiar la configuracion al skel
 sudo mkdir -p /etc/skel/.config
