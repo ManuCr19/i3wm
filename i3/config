@@ -9,8 +9,8 @@ font pango:Cantarell 11
 
 # Atajos para controlar i3wm
 bindsym Ctrl+$mod+r restart
-bindsym Ctrl+$mod+s shutdown -h now
-bindsym Ctrl+$mod+p poweroff
+bindsym Ctrl+$mod+s exec shutdown -h now
+bindsym Ctrl+$mod+p exec poweroff
 
 # Añadir gaps
 gaps inner 7
