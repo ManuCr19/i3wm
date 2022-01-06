@@ -23,6 +23,10 @@ git clone https://github.com/davatorium/rofi-themes
 sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
 sudo rm -r rofi-themes
 
+# Instalar y configurar picom
+sudo pacman --noconfirm -Sy picom
+sudo echo 'inactive-opacity = 1;' > /etc/skel/.config/picom.conf
+
 # Instalar y activar bluetooth
 sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooth.service
