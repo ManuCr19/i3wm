@@ -199,7 +199,7 @@ exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimal
 bindsym $mod+Return exec alacritty
 bindsym $mod+b exec brave
 bindsym $mod+f exec nautilus
-bindsym $mod+g exec lutris
+bindsym $mod+g exec steam-runtime
 
 # Asignar aplicaciones a los espacios de trabajo
 # Browsers 
