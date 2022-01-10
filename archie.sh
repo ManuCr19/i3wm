@@ -3,13 +3,13 @@
 # Instalar gestor de inicio de sesion
 sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
-sudo cp -rv lightdm /etc
+sudo cp -v lightdm/slick-gretter.conf /etc/lightdm
 sudo sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/#greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
 sudo sed -i '/^greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
 sudo mkdir /usr/share/backgrounds
-sudo cp lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
+sudo cp -v lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot
@@ -20,7 +20,7 @@ sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-aweso
 # Instalar rofi y sus temas
 sudo pacman --noconfirm -Sy rofi
 git clone https://github.com/davatorium/rofi-themes
-sudo cp rofi-themes/User\ Themes/* /usr/share/rofi/themes
+sudo cp -v rofi-themes/User\ Themes/* /usr/share/rofi/themes
 sudo rm -r rofi-themes
 
 # Instalar y configurar picom
@@ -38,4 +38,4 @@ trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es al
 trizen --noconfirm -Sy wine lutris mangohud steam
 
 # Copiar la configuracion al skel
-sudo cp skel /etc/skel
+sudo cp -rv skel /etc/skel
