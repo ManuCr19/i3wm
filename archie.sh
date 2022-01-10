@@ -3,7 +3,7 @@
 # Instalar gestor de inicio de sesion
 sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
-sudo cp lightdm/slick-greeter.conf /etc/lightdm
+sudo cp -rv lightdm /etc
 sudo sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/#greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
@@ -38,10 +38,4 @@ trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es al
 trizen --noconfirm -Sy wine lutris mangohud steam
 
 # Copiar la configuracion al skel
-sudo mkdir -p /etc/skel/.config
-sudo cp -r i3 /etc/skel/.config
-sudo cp -r rofi /etc/skel/.config
-sudo cp -r i3blocks /etc/skel/.config
-sudo cp -r scripts /etc/skel/.config
-sudo cp -r gtk-3.0 /etc/skel/.config
-sudo cp .gtkrc-2.0 /etc/skel
+sudo cp skel /etc/skel
