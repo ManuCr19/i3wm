@@ -203,16 +203,16 @@ bindsym $mod+g exec steam-runtime
 
 # Asignar aplicaciones a los espacios de trabajo
 # Browsers 
-assign [class="Brave"] $workspace1
+assign [title="Brave"] $workspace1
 # Terminals 
-assign [class="Alacritty"] $workspace2
+assign [title="Alacritty"] $workspace2
 # LibreOffice 
 assign [title="LibreOffice"] $workspace3
 # Folders 
 assign [class="Nautilus"] $workspace4
 # Games  
-for_window [title="Stadia"] move to workspace $workspace9
-for_window [title="Lutris"] move to workspace $workspace9
-for_window [title="Steam"] move to workspace $workspace9
+for_window [title="Jugar - Stadia"] move to workspace $workspace9
+assign [title="Lutris"] $workspace9
+assign [title="Steam"] $workspace9
 # Music 
-for_window [title="Spotify"] move to workspace $workspace10
+for_window [title="Spotify - Web"] move to workspace $workspace10
