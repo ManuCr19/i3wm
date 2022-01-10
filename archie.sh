@@ -3,13 +3,11 @@
 # Instalar gestor de inicio de sesion
 sudo pacman --noconfirm -Sy lightdm lightdm-slick-greeter
 sudo systemctl enable lightdm.service
-sudo cp -v lightdm/slick-gretter.conf /etc/lightdm
+sudo cp -rv lightdm /etc
 sudo sed -i '/#greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/^greeter-session/c greeter-session=lightdm-slick-greeter' /etc/lightdm/lightdm.conf
 sudo sed -i '/#greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
 sudo sed -i '/^greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
-sudo mkdir /usr/share/backgrounds
-sudo cp -v lightdm/playa-de-las-catedrales.jpg /usr/share/backgrounds
 
 # Instalar paquetes necesarios
 sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot
@@ -38,4 +36,4 @@ trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es al
 trizen --noconfirm -Sy wine lutris mangohud steam
 
 # Copiar la configuracion al skel
-sudo cp -rv skel /etc/skel
+sudo cp -rv skel /etc
