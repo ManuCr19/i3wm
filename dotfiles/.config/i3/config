@@ -1,0 +1,219 @@
+# i3wm config file
+# Autor: https://github.com/ManuCr19
+
+# Establecer tecla Mod como Alt
+set $mod Mod1
+
+# Establecemos fuente del sistema
+font pango:Cantarell 11
+
+# Atajos para controlar i3wm
+bindsym Ctrl+$mod+r restart
+bindsym Ctrl+$mod+s exec shutdown -h now
+bindsym Ctrl+$mod+p exec poweroff
+
+# Añadir gaps
+gaps inner 7
+smart_gaps on
+smart_borders on
+
+# Mod + clic izquierdo en una ventana flotante permite moverla
+# Mod + clic derecho en el borde de una ventana permite redimensionar
+floating_modifier $mod
+
+# El atajo de teclado para abrir una terminal será Mod + Enter
+# bindsym $mod+Return exec i3-sensible-terminal
+
+# La combinación de teclas para cerrar una ventana activa es Mod + shift + q
+bindsym $mod+Shift+q kill
+
+# Definimos los atajos de teclado de Rofi
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+s exec rofi -show ssh
+bindsym $mod+Shift+d exec rofi -show window
+bindsym $mod+m exec rofi -show run
+
+# Combinación de teclas para movernos entre ventanas
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ntilde focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Combinación de teclas para mover las ventanas
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Atajo para definir donde se abrira la sigiente ventana (abajo o al lado de la actual)
+bindsym $mod+h split v
+bindsym $mod+v split h
+
+# Cambiar la ventana a modo pantalla completa y viceversa
+bindsym $mod+Shift+f fullscreen toggle
+
+# Cambiar foco de una ventana anclada a flotante y viceversa
+bindsym $mod+space focus mode_toggle
+
+# Transformar una ventana de anclada a flotante y viceversa
+bindsym $mod+Shift+space floating toggle
+
+# Dar un nombre a los distintos espacios de trabajo
+set $workspace1 "1: Browsers "
+set $workspace2 "2: Terminals "
+set $workspace3 "3: LibreOffice "
+set $workspace4 "4: Folders "
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8" 
+set $workspace9 "9: Games  "
+set $workspace10 "10: Music "
+
+# Para moverse a un espacio de trabajo determinado
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Para mover una ventana activa a un espacio de treabajo determinado
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+0 move container to workspace $workspace10
+
+# Configuración para redimensionar las ventanas
+mode "resize" {
+        # Teclas estilo vim
+        bindsym j resize shrink width 3 px or 3 ppt
+        bindsym k resize grow height 3 px or 3 ppt
+        bindsym l resize shrink height 3 px or 3 ppt
+        bindsym ntilde resize grow width 3 px or 3 ppt
+
+        # Flechas
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
+
+        # Salir del modo resize
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
+}
+
+# Activar el modo redimensionar ventanas
+bindsym $mod+r mode "resize"
+
+# Definir Colores
+set $color "#0273ff"
+set $bg-color "#222222"
+set $urgent "#ff0000"
+
+# Colores de las ventanas
+# class                  border   backgr.  text     indicator  child_border
+client.focused           #4c7899  #285577  #ffffff  #2e9ef4    #285577
+client.focused_inactive  #333333  #5f676a  #ffffff  #484e50    #5f676a
+client.unfocused         #333333  #222222  #888888  #292d2e    #222222
+client.urgent            #2f343a  #900000  #ffffff  #900000    #900000
+client.placeholder       #000000  #0c0c0c  #ffffff  #000000    #0c0c0c
+
+client.background       #ffffff
+
+# Definir barra
+bar {
+	# Programa de la barra
+        status_command i3blocks -c ~/.config/i3blocks/config
+        
+        # Posicion de la barra
+        position top
+        
+        # Colores de la barra
+        colors {
+		background $bg-color
+
+		#color class        border     backgr.    text
+		focused_workspace   $bg-color  $color     $bg-color
+		inactive_workspace  $bg-color  $bg-color  $color
+		urgent_workspace    $bg-color  $urgent    $bg-color
+		binding_mode        $bg-color  $urgent    $bg-color
+        }
+}
+
+# Quita la ventana de título y se define el grosor del borde que recubre las ventanas
+for_window [class="^.*"] border pixel 3
+new_window pixel 3
+
+# Mutear, incrementar y bajar el volúmen con el teclado
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Incrementar o disminuir el brillo del monitor (need brightnessctl)
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+
+# Teclas multimedia (need playerctl)
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Capturas de pantalla (need gnome-screenshot)
+bindsym Print exec gnome-screenshot
+bindsym $mod+Print exec gnome-screenshot --interactive
+
+# Activar bloq num al iniciar i3wm (need numlockx)
+exec_always --no-startup-id numlockx on
+
+# Applets (need network-manager-applet and blueman)
+exec_always nm-applet
+exec_always blueman-applet
+
+# Ejecutar picom
+exec_always picom
+
+# Establecer el fondo de escritorio al iniciar i3wm (need feh)
+exec_always feh --bg-scale https://assets.hongkiat.com/uploads/beautiful-minimalist-desktop-wallpapers/4k/original/01.jpg
+
+# Atajos para aplicaciones
+bindsym $mod+Return exec alacritty
+bindsym $mod+b exec brave
+bindsym $mod+f exec nautilus
+bindsym $mod+g exec steam-runtime
+
+# Asignar aplicaciones a los espacios de trabajo
+# Browsers 
+assign [title="Brave"] $workspace1
+# Terminals 
+assign [title="Alacritty"] $workspace2
+# LibreOffice 
+assign [title="LibreOffice"] $workspace3
+# Folders 
+assign [class="Nautilus"] $workspace4
+# Games  
+for_window [title="Jugar - Stadia"] move to workspace $workspace9
+assign [title="Lutris"] $workspace9
+assign [title="Steam"] $workspace9
+# Music 
+for_window [title="Spotify - Web"] move to workspace $workspace10

@@ -1,0 +1,40 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+
+# Global properties
+separator=true
+separator_block_width=15
+align=center
+
+# Reproductor multimedia
+[mediaplayer]
+command=perl ~/.config/scripts/mediaplayer.pl 
+label= - 
+interval=5
+
+# Indicador de actualizaciones
+[update]
+command=python3 ~/.config/scripts/update.py
+markup=pango
+interval= 3600
+QUIET=true
+WATCH=^linux.*
+UPDATE_COLOR=#FFFF85
+AUR=true
+
+# Indicador de volumen
+[volume-pulseaudio]
+command=bash ~/.config/scripts/volume
+interval=1
+
+# Indicador de Bateria
+[battery]
+command=bash ~/.config/scripts/i3b-gate 6
+interval=10
+
+#Mostrar hora
+[hora]
+command=bash ~/.config/scripts/i3b-gate 5
+interval=1
