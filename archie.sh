@@ -10,7 +10,7 @@ sudo sed -i '/#greeter-show-manual-login/c greeter-show-manual-login=true' /etc/
 sudo sed -i '/^greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
 
 # Instalar paquetes necesarios
-sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot
+sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot picom
 
 # Instalar tema gtk, paquete de iconos y fuente
 sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-awesome
@@ -21,19 +21,12 @@ git clone https://github.com/davatorium/rofi-themes
 sudo cp -v rofi-themes/User\ Themes/* /usr/share/rofi/themes
 sudo rm -r rofi-themes
 
-# Instalar y configurar picom
-sudo pacman --noconfirm -Sy picom
-sudo echo 'inactive-opacity = 1;' > /etc/skel/.config/picom.conf
-
 # Instalar y activar bluetooth
 sudo pacman --noconfirm -Sy blueman pulseaudio-bluetooth
 sudo systemctl enable bluetooth.service
 
 # Instalar programas
-trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty
-
-# Instalar game app
-trizen --noconfirm -Sy wine lutris mangohud steam
+trizen --noconfirm -Sy brave-bin nautilus libreoffice-fresh-es hunspell-es_es alacritty steam
 
 # Copiar la configuracion al skel
 sudo cp -rv skel /etc
