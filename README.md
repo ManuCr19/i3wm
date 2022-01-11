@@ -3,23 +3,23 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm + dunst
 
 | Paquete              | Descripcion                                |
 | -------------------- | -------------------------------------------|
-| **i3-wm**            | Contiene el gestor de ventanas i3          |
-| **i3-gaps**          | Permite añadir gaps a i3wm                 |
-| **i3blocks**         | Es la barra que utilizaremos               |
+| **i3-gaps**          | Gestor de ventanas i3 con opcion de configuracion de gaps |
+| **i3blocks**         | Barra de estado                            |
 | **rofi**             | Menu para lanzar las aplicaciones          |
 | **feh**              | Permite cambiar el fondo de pantalla       |
-| **numlockx**         | Activar el teclado numerico                |
-| **pulseaudio**       | Sera el servidor de audio que utilizaremos |
+| **numlockx**         | Activa el teclado numerico                 |
+| **pulseaudio**       | Servidor de audio                          |
 | **pavucontrol**      | Controlador de audio para pulseaudio       |
-| **ttf-font-awesome** | Fuente para que funciones los iconos       |
+| **ttf-font-awesome** | Fuente de texto que incluye iconos         |
 | **acpi**             | Necesario para el indicador de bateria     |
 | **dunst**            | Para recivir las notificaciones            |
 | **gnome-themes-extra** | Contiene el tema adwaita-dark            |
+| **gnome-screenshot** | Capturas de pantalla                       |
+| **blueman**          | Gestor de bluetooth                        |
 
 # Lightdm
-Sera el gestor de inicio de sesion que usaremos por defecto.
-
 | Paquete           | Descripcion                                 |
 |-------------------|---------------------------------------------|
 | **lightdm**       | Contiene el gestor de inicio de sesion      |
 | **slick-greeter** | Cambia la apariencia por defecto de lightdm |
+| **numlockx**      | Activa el teclado numerico                 |
