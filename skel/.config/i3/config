@@ -181,6 +181,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Capturas de pantalla (need gnome-screenshot)
 bindsym Print exec gnome-screenshot
+bindsym $mod+Print exec gnome-screenshot --interactive
 
 # Activar bloq num al iniciar i3wm (need numlockx)
 exec_always --no-startup-id numlockx on
