@@ -10,7 +10,10 @@ sudo sed -i '/#greeter-show-manual-login/c greeter-show-manual-login=true' /etc/
 sudo sed -i '/^greeter-show-manual-login/c greeter-show-manual-login=true' /etc/lightdm/lightdm.conf
 
 # Instalar paquetes necesarios
-sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx acpi playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst network-manager-applet gnome-screenshot picom
+sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst gnome-screenshot picom
+
+# Instalar applets
+sudo trizen --noconfirm -Sy network-manager-applet volctl cbatticon
 
 # Instalar tema gtk, paquete de iconos y fuente
 sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-awesome
