@@ -13,7 +13,7 @@ sudo sed -i '/^greeter-show-manual-login/c greeter-show-manual-login=true' /etc/
 sudo pacman --noconfirm -Sy i3-gaps i3blocks feh numlockx playerctl pacman-contrib brightnessctl pulseaudio pavucontrol dunst gnome-screenshot picom
 
 # Instalar applets
-sudo trizen --noconfirm -Sy network-manager-applet volctl cbatticon
+trizen --noconfirm -Sy network-manager-applet volctl cbatticon
 
 # Instalar tema gtk, paquete de iconos y fuente
 sudo pacman --noconfirm -Sy gnome-themes-extra papirus-icon-theme ttf-font-awesome
