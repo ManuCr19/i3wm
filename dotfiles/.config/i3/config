@@ -189,6 +189,8 @@ exec_always --no-startup-id numlockx on
 # Applets (need network-manager-applet and blueman)
 exec_always nm-applet
 exec_always blueman-applet
+exec_always volctl
+exec_always cbatticon
 
 # Ejecutar picom
 exec_always picom
