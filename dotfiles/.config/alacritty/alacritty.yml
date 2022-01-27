@@ -1,5 +1,6 @@
 # Background opacity
-background_opacity: 0.75
+window:
+  opacity: 0.75
 
 # Colors (One Dark)
 colors:
@@ -29,4 +30,3 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xffffff'
-    
