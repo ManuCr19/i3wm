@@ -24,17 +24,7 @@ WATCH=^linux.*
 UPDATE_COLOR=#FFFF85
 AUR=true
 
-# Indicador de volumen
-#[volume-pulseaudio]
-#command=bash ~/.config/scripts/volume
-#interval=1
-
-# Indicador de Bateria
-#[battery]
-#command=bash ~/.config/scripts/i3b-gate 6
-#interval=10
-
 #Mostrar hora
 [hora]
-command=bash ~/.config/scripts/i3b-gate 5
+command=date "+%d de %b, %R"
 interval=1
