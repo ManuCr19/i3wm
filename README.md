@@ -10,6 +10,7 @@ Configuracion de i3wm + gaps + rofi + i3blocks + lightdm + dunst
 | **numlockx**         | Activa el teclado numerico                 |
 | **pulseaudio**       | Servidor de audio                          |
 | **pavucontrol**      | Controlador de audio para pulseaudio       |
+|-|-|
 | **ttf-font-awesome** | Fuente de texto que incluye iconos         |
 | **acpi**             | Necesario para el indicador de bateria     |
 | **dunst**            | Para recivir las notificaciones            |
