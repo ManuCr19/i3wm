@@ -2,8 +2,8 @@
 Configuracion de i3wm + gaps + rofi + i3blocks + lightdm + dunst
 
 | Paquete | Descripcion |
-|prova|hola|
 | - | - |
+|prova|hola| pive |
 | **i3-gaps**          | Gestor de ventanas i3 con opcion de configuracion de gaps |
 | **i3blocks**         | Barra de estado                            |
 | **rofi**             | Menu para lanzar las aplicaciones          |
